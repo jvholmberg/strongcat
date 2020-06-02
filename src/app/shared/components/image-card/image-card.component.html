@@ -1,0 +1,15 @@
+<mat-card class="shared-image-card">
+  <mat-card-header>
+    <div mat-card-avatar [class]="avatarClassName"></div>
+    <mat-card-title>{{title}}</mat-card-title>
+    <mat-card-subtitle>{{subtitle}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image [src]="imageSrc" alt="imageAlt">
+  <mat-card-content>
+    <ng-content></ng-content>
+  </mat-card-content>
+  <mat-card-actions>
+    <button ng-if="!!leftButtonText && !!onLeftButtonClick" mat-button (click)="onLeftButtonClick">{{leftButtonText}}</button>
+    <button ng-if="!!rightButtonText && !!onRightButtonClick" mat-button (click)="onRightButtonClick">{{rightButtonText}}</button>
+  </mat-card-actions>
+</mat-card>
