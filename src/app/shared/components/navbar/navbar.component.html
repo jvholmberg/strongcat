@@ -1,5 +1,16 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
-    strongcat
+
+    <!-- NotLoggedIn -->
+    <ng-container *ngIf="!loggedIn">
+      <button [routerLink]="''" mat-button>strongcat</button>
+      <button [routerLink]="'login'" mat-button>Login</button>
+    </ng-container>
+
+    <!-- LoggedIn -->
+    <ng-container *ngIf="loggedIn">
+      <button [routerLink]="'dashboard'" mat-button>strongcat</button>
+      <button [routerLink]="'profile'" mat-button>Profile</button>
+    </ng-container>
   </mat-toolbar-row>
 </mat-toolbar>

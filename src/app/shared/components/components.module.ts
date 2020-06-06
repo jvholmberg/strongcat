@@ -8,6 +8,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { NavbarComponent } from '@shared/components/navbar/navbar.component';
 import { FooterComponent } from '@shared/components/footer/footer.component';
 import { ImageCardComponent } from '@shared/components/image-card/image-card.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { ImageCardComponent } from '@shared/components/image-card/image-card.com
     ImageCardComponent,
   ],
   imports: [
+    RouterModule,
     CommonModule,
     MatToolbarModule,
     MatCardModule,
